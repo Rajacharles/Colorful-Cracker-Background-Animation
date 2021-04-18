@@ -1,0 +1,3 @@
+# Colorful-Cracker-Background-Animation
+
+A particle system is a technique used to simulate a variety of special visual effects like sparks, dust, smoke, fire, explosions, rain, stars, falling snow, glowing trails, and many others. Basically, a particle system consists of emitters and the particles themselves. The basic idea behind the particle system is very simple – by drawing lots of very small squares or circles, which behave individually according to some rules, you can generate a visual effect where the sum of the parts is much more than the parts separately. Here are some amazing particle effect animation tutorials and examples using HTML5 canvas to help you create beautiful visual effects, such as explosions, lasers, fire, and so on.
