@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Line Burst Background Animation - Using HTML, CSS & Javascript</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="animation-container">
+			<div class="burst">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+
+		<script>
+			function createBurst(){
+				let animContainer = document.querySelector(".animation-container");
+				let burst = document.querySelector(".burst");
+				let lines = document.querySelectorAll(".line");
+
+				burst.style.top = Math.random() * innerHeight + "px";
+				burst.style.left = Math.random() * innerWidth + "px";
+
+				lines.forEach((line) => {
+					const colors = ["#ff4839", "#2ecc58", "#1f72fb", "#ffc419",
+									"#e708bf", "#ff6511", "#862cec", "#ffff0a"];
+					const randomColor = colors[Math.floor(Math.random() * colors.length)];
+					line.style.background = randomColor;				
+				});
+
+				let burstClone = burst.cloneNode(true);
+				animContainer.appendChild(burstClone);
+
+				setTimeout(() =>{
+					burstClone.remove();
+				}, 8000);
+			}
+			setInterval(createBurst, 200);
+		</script>
+	</body>
+</html>
